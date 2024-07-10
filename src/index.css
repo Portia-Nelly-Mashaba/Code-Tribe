@@ -17,10 +17,13 @@
   --neutral4: 189 41% 97%;
   --White: 179 41% 99%;
 
+  --spacer: clamp(4rem, 7vw, 6.5rem);
+
 }
 
 body{
   font-family: 'Space Mono', monospace;
   font-size: 1.5rem;
+  padding-block: var(--padding);
   background-color: hsl(var(--neutral3));
 }
