@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Display() {
+function Display({calculatedTip, total}) {
     return (
         <div className='display'>
             <div className='display-group'>

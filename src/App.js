@@ -9,15 +9,19 @@ function App() {
   const [tip, setTip] = useState('');
   const [people, setPeople] = useState ('');
   const [calculatedTip, setCalculatedTip] = useState (0);
-  const [totalPerPerson, setTotalPerPerson] = useState (0);
+  const [total, setTotal] = useState (0);
 
   useEffect(() => {
     console.table({bill, tip, people})
     if(bill>0 && tip>0 && people>0){
       calculatedTip(bill * (tip /100));
-      setTotalPerPerson (bi)
+      total (calculatedTip + bill);
     }
-  }, [bill, tip, people])
+  }, [bill, tip, people, calculatedTip])
+
+  const handleResetBtn = (e) =>{
+    console.log('reseted');
+  }
 
   return (
     <div className="wrapper">
@@ -31,7 +35,11 @@ function App() {
           people={people}
           setPeople={setPeople}
           />
-        <Display/>
+        <Display
+          total={total}
+          calculatedTip={calculatedTip}
+          handleResetBtn={handleResetBtn}
+        />
       </div>
     </div>
   );
