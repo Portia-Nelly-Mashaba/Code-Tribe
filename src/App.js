@@ -10,7 +10,7 @@ function App() {
   const [people, setPeople] = useState('');
   const [calculatedTip, setCalculatedTip] = useState(0);
   const [total, setTotal] = useState(0);
-
+  const [hasInteracted, setHasInteracted] = useState(false);
 
   useEffect(() => {
     console.table({ bill, tip, people });
@@ -28,7 +28,7 @@ function App() {
     setTip("");
     setCalculatedTip(0);
     setTotal(0);
-  
+    setHasInteracted(false);
   };
 
   return (
@@ -42,6 +42,8 @@ function App() {
           setTip={setTip}
           people={people}
           setPeople={setPeople}
+          hasInteracted={hasInteracted}
+          setHasInteracted={setHasInteracted}
         />
         <Display
           total={total}

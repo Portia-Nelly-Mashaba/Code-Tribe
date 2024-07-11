@@ -1,14 +1,12 @@
 import React from 'react'
-
+// import React, { useState} from 'react';
 import Dollar from './icon-dollar.svg'
 import Person from './icon-person.svg'
 
 
-function Form({bill, setBill, tip, setTip, people, setPeople}) {
-   
+function Form({bill, setBill, tip, setTip, people, setPeople, hasInteracted, setHasInteracted}) {
     const handleSelectedTip = (e) => {
         setTip(e.target.value);
-        
     }
     
     return (
@@ -61,17 +59,19 @@ function Form({bill, setBill, tip, setTip, people, setPeople}) {
             <div className='label-group'>
                 <div className='label-wrapper'> 
                 <label className='label' htmlFor='people'>Number of People</label>
-                    <p className='error'>{hasInteracted && people === 0 ? "Can't be zero" : ""}</p>
-            </div>
-                <div className='number-wrapper'>
-                    <input
-                        type='number'
-                        className={`number-input ${hasInteracted && people === 0 ? 'error' : ''}`}
-                        value={people} id='people' onChange={(e) => {setPeople(+e.target.value); setHasInteracted(true); }} />
-                </div>        
+                <p className='error'>{hasInteracted && people === 0 ? "Can't be zero" : ""}</p>
             </div>
 
+            <div className='number-wrapper'>
+                <input
+                    type='number'
+                    className={`number-input ${hasInteracted && people === 0 ? 'error' : ''}`}
+                    value={people} id='people' onChange={(e) => {setPeople(+e.target.value); setHasInteracted(true);}}/>
+                    
+          <img src={Person} aria-hidden='true' className='icon' />
         </div>
+      </div>
+    </div>
     )
 }
 
