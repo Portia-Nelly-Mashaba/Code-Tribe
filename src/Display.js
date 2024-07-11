@@ -1,6 +1,9 @@
 import React from 'react'
 
-function Display({calculatedTip, total}) {
+function Display({calculatedTip, total, people, handleResetBtn}) {
+    const returnCurrencyAmount = (amount) =>
+        new Intl.NumberFormat('en-US', {style: 'currency', currency: 'USD'}).format(amount);
+    
     return (
         <div className='display'>
             <div className='display-group'>
@@ -9,7 +12,7 @@ function Display({calculatedTip, total}) {
                     <p className='header'>Tip Amount</p>
                     <p className='unit'>/ person</p>
                 </div>
-                    <p className='display-amount'>$0.00</p>
+                    <p className='display-amount'>{returnCurrencyAmount(calculatedTip ? calculatedTip/people : 0)}</p>
                 </div>
 
             <div className='display-row'>
@@ -17,11 +20,14 @@ function Display({calculatedTip, total}) {
                     <p className='header'>Total</p>
                     <p className='unit'>/ person</p>
                 </div>
-                    <p className='display-amount'>$0.00</p>
+                    <p className='display-amount'>{returnCurrencyAmount(total ? total : 0)}</p>
             </div>
 
             </div>
-            <button className='btn' disabled>Reset</button>
+            {
+                total ? (<button className='btn' onClick={handleResetBtn}>Reset</button>):
+                (<button className='btn' disabled>Reset</button>)
+            }
         </div>
     )
 }

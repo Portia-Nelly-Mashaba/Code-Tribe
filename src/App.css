@@ -79,6 +79,10 @@ input::-webkit-inner-spin-button {
   box-shadow: 0 0 0 .2rem hsl(var(--brand)), 0 0 0 .2rem hsl(var(--neutral1));
 }
 
+.number-input.error:focus {
+  box-shadow: 0 0 0 0.2rem hsl(var(--error));
+}
+
 .label-wrapper{
   position: relative;
   display: flex;
