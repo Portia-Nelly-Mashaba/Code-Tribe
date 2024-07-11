@@ -1,15 +1,14 @@
+import React from 'react'
 
-import React, { useStategit} from 'react';
 import Dollar from './icon-dollar.svg'
 import Person from './icon-person.svg'
 
 
-function Form({bill, setBill, tip, setTip, people, setPeople, hasInteracted, setHasInteracted}) {
-    const [isCustomSelected, setIsCustomSelected] = useState(false)
-
+function Form({bill, setBill, tip, setTip, people, setPeople}) {
+   
     const handleSelectedTip = (e) => {
         setTip(e.target.value);
-        setIsCustomSelected(e.target.value == "" ? false : true);
+        
     }
     
     return (
