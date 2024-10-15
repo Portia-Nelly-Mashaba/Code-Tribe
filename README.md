@@ -46,7 +46,7 @@ To run this project locally, follow these steps:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/tip-calculator-app.git
+   git clone https://github.com/Portia-Nelly-Mashaba/Code-Tribe.git
    ```
 
 2. Install the dependencies:
