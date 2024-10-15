@@ -1,70 +1,72 @@
-# Getting Started with Create React App
+# Tip Calculator Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a **Tip Calculator App** built using **React.js** and **CSS** for styling. The app allows users to calculate tips based on the bill amount, tip percentage, and the number of people sharing the bill. It provides a simple and intuitive interface for users to calculate tips accurately and efficiently.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+### User Features:
+1. **Home Page:**
+   - Input fields for:
+     - Bill amount.
+     - Selectable tip percentages (e.g., 5%, 10%, 15%, etc.).
+     - Custom tip percentage input.
+     - Number of people sharing the bill.
+   - Displays the calculated:
+     - Tip amount per person.
+     - Total amount per person (including the tip).
+   - Reset button to clear all inputs and results.
 
-### `npm start`
+2. **Responsive Design:**
+   - The layout adjusts to various screen sizes for optimal usability on mobile, tablet, and desktop devices.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+3. **Validation:**
+   - Alerts or messages for invalid inputs:
+     - Zero or negative values for bill amount or number of people.
+     - Appropriate handling for decimal values.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+4. **Real-time Calculation:**
+   - As the user enters values or selects a tip percentage, the tip and total amounts are updated in real-time.
 
-### `npm test`
+### Navigation Bar:
+- **Logo/Title:** Displays the app name.
+- **Reset Button:** Allows users to reset all fields to their default state.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Technology Stack
+- **Frontend:** React.js
+- **Styling:** CSS (custom styling for a clean and modern look)
 
-### `npm run build`
+## Images
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![Tip Calculator Main Screen](src/assets/img/TipCalculator.PNG)
+![Tip Calculation Results](src/assets/img/TipCalculatorResults.PNG)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Installation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+To run this project locally, follow these steps:
 
-### `npm run eject`
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/tip-calculator-app.git
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. Install the dependencies:
+   ```bash
+   cd tip-calculator-app
+   npm install
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. Start the React development server:
+   ```bash
+   npm start
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+4. Open the app in your browser:
+   ```
+   http://localhost:3000
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Future Enhancements
+1. Add an option for splitting tips unevenly among different users.
+2. Implement local storage to retain the last calculated tip and bill details.
+3. Add a dark mode option for improved user experience.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
